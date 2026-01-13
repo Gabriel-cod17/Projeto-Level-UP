@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* configuração da parte do header */
+
+.header_Agencia_Marketing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 999;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header_Agencia_Marketing.scrolled {
+  position: fixed;
+  background: #0000009a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.div_Logo_Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.img_Logo {
+  width: 75px;
+  height: 75px;
+}
+
+.nav_Agencia_Marketing a {
+  text-decoration: none;
+  color: #ffffff60;
+  padding: 0 5px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  transition: color 0.5s ease;
+}
+
+.bt_Consultoria {
+  padding: 10px 18px;
+  border: 1px solid #c62828;
+  color: #fff;
+  background: #c62828;
+  border-radius: 30px;
+  box-shadow: 2px 2px 20px #c62828;
+  cursor: pointer;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+/* Estilizando a parte principal da página, Main */
+
+.main_Agencia_Marketing {
+  background-image: url("../img/img_main.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.section_Main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 100vh;
+  padding: 80px 10px;
+}
+
+.div_Section_P {
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
+  word-break: normal;
+  overflow: hidden;
+}
+
+.div_Section_P p {
+  color: #1f3c88;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.div_Section_H1 {
+  overflow-wrap: break-word;
+  word-break: normal;
+  overflow: hidden;
+}
+
+.div_Section_H1 h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 96px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.div_Section_H1 h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 96px;
+  font-weight: 700;
+  color: #1f3c88;
+}
+
+.div_Section_H3 {
+  margin-top: 15px;
+  overflow-wrap: break-word;
+  word-break: normal;
+  overflow: hidden;
+}
+
+.div_Section_H3 h3 {
+  color: #bddbdd;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+}
+
+.div_Section_BT {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.button_Case {
+  padding: 10px 25px;
+  border: 1px solid #1f3c88;
+  border-radius: 20px;
+  color: #fff;
+  background: #205dab;
+  box-shadow: 2px 2px 20px #205dab;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.button_Agendar {
+  padding: 10px 25px;
+  border: 1px solid #c62828;
+  border-radius: 20px;
+  color: #fff;
+  background: #c62828;
+  box-shadow: 2px 2px 20px #c62828;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+/* Para animação funcionar no desktop */
+
+@media (hover: hover) {
+  .nav_Agencia_Marketing a:hover {
+    color: white;
+  }
+
+  .button_Case:hover {
+    transform: scale(1.1);
+  }
+  .button_Agendar:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Para animação funcionar no mobile */
+
+@media (hover: none) {
+  .nav_Agencia_Marketing a:active {
+    color: white;
+  }
+  .button_Case:active {
+    transform: scale(1.1);
+  }
+  .button_Agendar:active {
+    transform: scale(1.1);
+  }
+}
+
+/* mobile Pequeno */
+
+@media (max-width: 480px) {
+  .div_Section_P p {
+    font-size: 20px;
+  }
+
+  .div_Section_H1 h1 {
+    font-size: 50px;
+  }
+
+  .div_Section_H1 h2 {
+    font-size: 50px;
+  }
+
+  .div_Section_H3 h3 {
+    font-size: 10px;
+  }
+
+  .div_Section_BT {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .button_Case {
+    padding: 10px 25px;
+    border: 1px solid #205dab;
+    border-radius: 20px;
+    color: #fff;
+    background: #205dab;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+  }
+
+  .button_Agendar {
+    padding: 10px 25px;
+    border: 1px solid #e66108;
+    border-radius: 20px;
+    color: #fff;
+    background: #e66108;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+  }
+}
+
+/* mobile tablet */
+
+@media (max-width: 768px) {
+}
+
+/* tablet notebook */
+
+@media (max-width: 1024px) {
+}
+
+/* desktop */
+
+@media (max-width: 480px) {
+}
