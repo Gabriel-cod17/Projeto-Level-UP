@@ -137,7 +137,7 @@
 .div_Section_BT {
   display: flex;
   gap: 20px;
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 .button_Case {
@@ -168,6 +168,217 @@
   transition: transform 0.5s ease;
 }
 
+/* Estilizando a section_Portfólio  */
+
+.section_Portfolio {
+  background-color: #000;
+}
+
+.div_Portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.div_Resultados {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 0 10px;
+}
+
+.div_Resultados p {
+  color: #205dab;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+.div_Resultados h1 {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 45px;
+}
+.div_Resultados h3 {
+  color: #bddbdd;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.div_Projetos_Agencia {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  margin-top: 30px;
+}
+
+.Projeto_um,
+.Projeto_dois,
+.Projeto_tres,
+.projeto_quatro,
+.projeto_cinco,
+.projeto_seis {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.116);
+  border-radius: 15px;
+  width: 350px;
+  height: 200px;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.Projeto_um::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: url("../img/video.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  transition: transform 0.5s ease;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.Projeto_dois::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: url("../img/filmando.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  transition: transform 0.5s ease;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.Projeto_tres::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: url("../img/social-media.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  transition: transform 0.5s ease;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.projeto_quatro::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: url("../img/copy.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  transition: transform 0.5s ease;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.projeto_cinco::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: url("../img/gestão.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  transition: trasnform 0.5s ease;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.projeto_seis::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: url("../img/desenvolvimento.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  transition: trasnform 0.5s ease;
+  pointer-events: none;
+  will-change: transform;
+}
+.Projeto_um::after,
+.Projeto_dois::after,
+.Projeto_tres::after,
+.projeto_quatro::after,
+.projeto_cinco::after,
+.projeto_seis::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.8) 35%,
+    rgba(0, 0, 0, 0.5) 65%
+  );
+
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+  pointer-events: none;
+  will-change: opacity, transform;
+}
+
+.Projeto_um h3,
+.Projeto_dois h3,
+.Projeto_tres h3,
+.projeto_quatro h3,
+.projeto_cinco h3,
+.projeto_seis h3 {
+  z-index: 2;
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 2px;
+  font-size: 18px;
+  padding-bottom: 15px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.Projeto_um p,
+.Projeto_dois p,
+.Projeto_tres p,
+.projeto_quatro p,
+.projeto_cinco p,
+.projeto_seis p {
+  z-index: 2;
+  color: white;
+  font-size: 10px;
+  font-family: "Inter", sans-serif;
+  opacity: 0;
+  padding-bottom: 15px;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
 /* Para animação funcionar no desktop */
 
 @media (hover: hover) {
@@ -180,6 +391,41 @@
   }
   .button_Agendar:hover {
     transform: scale(1.1);
+  }
+
+  /* Estilizando a section_Portfólio  */
+  .Projeto_um:hover::before,
+  .Projeto_dois:hover::before,
+  .Projeto_tres:hover::before,
+  .projeto_quatro:hover::before,
+  .projeto_cinco:hover::before,
+  .projeto_seis:hover::before {
+    transform: scale(1.1);
+  }
+
+  .Projeto_um:hover::after,
+  .Projeto_dois:hover::after,
+  .Projeto_tres:hover::after,
+  .projeto_quatro:hover::after,
+  .projeto_cinco:hover::after,
+  .projeto_seis:hover::after {
+    opacity: 1;
+  }
+
+  .Projeto_um:hover p,
+  .Projeto_dois:hover p,
+  .Projeto_tres:hover p,
+  .projeto_quatro:hover h3,
+  .projeto_cinco:hover h3,
+  .projeto_seis:hover h3,
+  .Projeto_um:hover h3,
+  .Projeto_dois:hover h3,
+  .Projeto_tres:hover h3,
+  .projeto_quatro:hover p,
+  .projeto_cinco:hover p,
+  .projeto_seis:hover p {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -195,57 +441,96 @@
   .button_Agendar:active {
     transform: scale(1.1);
   }
+
+  /* Estilizando a section_Portfólio  */
+
+  .Projeto_um:focus-within::before,
+  .Projeto_dois:focus-within::before,
+  .Projeto_tres:focus-within::before,
+  .projeto_quatro:focus-within::before,
+  .projeto_cinco:focus-within::before,
+  .projeto_seis:focus-within::before {
+    transform: scale(1.1);
+  }
+
+  .Projeto_um:focus-within::after,
+  .Projeto_dois:focus-within::after,
+  .Projeto_tres:focus-within::after,
+  .projeto_quatro:focus-within::after,
+  .projeto_cinco:focus-within::after .projeto_seis:focus-within::after {
+    opacity: 1;
+  }
+  .Projeto_um:focus-within h3,
+  .Projeto_dois:focus-within h3,
+  .Projeto_tres:focus-within h3,
+  .Projeto_um:focus-within p,
+  .Projeto_dois:focus-within p,
+  .Projeto_tres:focus-within p,
+  .projeto_quatro:focus-within p,
+  .projeto_cinco:focus-within p,
+  .projeto_seis:focus-within p {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* mobile Pequeno */
 
 @media (max-width: 480px) {
   .div_Section_P p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .div_Section_H1 h1 {
-    font-size: 50px;
+    font-size: 30px;
   }
 
   .div_Section_H1 h2 {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .div_Section_H3 h3 {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .div_Section_BT {
     display: flex;
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .button_Case {
-    padding: 10px 25px;
-    border: 1px solid #205dab;
-    border-radius: 20px;
-    color: #fff;
-    background: #205dab;
-    font-family: "Inter", sans-serif;
     font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.5s ease;
   }
 
   .button_Agendar {
-    padding: 10px 25px;
-    border: 1px solid #e66108;
-    border-radius: 20px;
-    color: #fff;
-    background: #e66108;
-    font-family: "Inter", sans-serif;
     font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.5s ease;
+  }
+
+  /* Estilizando a section_Portfólio  */
+
+  .section_Main {
+    gap: 20px;
+  }
+
+  .div_Resultados {
+    margin-top: 20px;
+  }
+
+  .div_Resultados p {
+    font-size: 12px;
+  }
+
+  .div_Resultados h1 {
+    font-size: 25px;
+  }
+
+  .div_Resultados h3 {
+    font-size: 10px;
+  }
+
+  .div_Projetos_Agencia {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -259,7 +544,7 @@
 @media (max-width: 1024px) {
 }
 
-/* desktop */
+/* desktop  */
 
 @media (max-width: 480px) {
 }
