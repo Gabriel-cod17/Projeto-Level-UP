@@ -415,15 +415,15 @@
   .Projeto_um:hover p,
   .Projeto_dois:hover p,
   .Projeto_tres:hover p,
-  .projeto_quatro:hover h3,
-  .projeto_cinco:hover h3,
-  .projeto_seis:hover h3,
+  .projeto_quatro:hover p,
+  .projeto_cinco:hover p,
+  .projeto_seis:hover p,
   .Projeto_um:hover h3,
   .Projeto_dois:hover h3,
   .Projeto_tres:hover h3,
-  .projeto_quatro:hover p,
-  .projeto_cinco:hover p,
-  .projeto_seis:hover p {
+  .projeto_quatro:hover h3,
+  .projeto_cinco:hover h3,
+  .projeto_seis:hover h3 {
     opacity: 1;
     transform: translateY(0);
   }
@@ -457,12 +457,16 @@
   .Projeto_dois:focus-within::after,
   .Projeto_tres:focus-within::after,
   .projeto_quatro:focus-within::after,
-  .projeto_cinco:focus-within::after .projeto_seis:focus-within::after {
+  .projeto_cinco:focus-within::after,
+  .projeto_seis:focus-within::after {
     opacity: 1;
   }
   .Projeto_um:focus-within h3,
   .Projeto_dois:focus-within h3,
   .Projeto_tres:focus-within h3,
+  .projeto_quatro:focus-within h3,
+  .projeto_cinco:focus-within h3,
+  .projeto_seis:focus-within h3,
   .Projeto_um:focus-within p,
   .Projeto_dois:focus-within p,
   .Projeto_tres:focus-within p,
