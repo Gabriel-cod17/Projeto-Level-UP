@@ -63,16 +63,20 @@
 /* Estilizando a parte principal da página, Main */
 
 .main_Agencia_Marketing {
-  background-image: url("../img/img_main.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 1;
+  overflow: hidden;
+}
+
+.img_main {
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .section_Main {
@@ -237,91 +241,21 @@
   height: 200px;
   padding: 0 10px;
   overflow: hidden;
+  z-index: 0;
 }
 
-.Projeto_um::before {
+.img_Projeto {
   position: absolute;
-  content: "";
   inset: 0;
-  background-image: url("../img/video.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
+  z-index: -1;
   transition: transform 0.5s ease;
   pointer-events: none;
   will-change: transform;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.Projeto_dois::before {
-  position: absolute;
-  content: "";
-  inset: 0;
-  background-image: url("../img/filmando.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
-  transition: transform 0.5s ease;
-  pointer-events: none;
-  will-change: transform;
-}
-
-.Projeto_tres::before {
-  position: absolute;
-  content: "";
-  inset: 0;
-  background-image: url("../img/social-media.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
-  transition: transform 0.5s ease;
-  pointer-events: none;
-  will-change: transform;
-}
-
-.projeto_quatro::before {
-  position: absolute;
-  content: "";
-  inset: 0;
-  background-image: url("../img/copy.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
-  transition: transform 0.5s ease;
-  pointer-events: none;
-  will-change: transform;
-}
-
-.projeto_cinco::before {
-  position: absolute;
-  content: "";
-  inset: 0;
-  background-image: url("../img/gestão.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
-  transition: trasnform 0.5s ease;
-  pointer-events: none;
-  will-change: transform;
-}
-
-.projeto_seis::before {
-  position: absolute;
-  content: "";
-  inset: 0;
-  background-image: url("../img/desenvolvimento.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
-  transition: trasnform 0.5s ease;
-  pointer-events: none;
-  will-change: transform;
-}
 .Projeto_um::after,
 .Projeto_dois::after,
 .Projeto_tres::after,
@@ -341,7 +275,7 @@
 
   opacity: 0;
   transition: opacity 0.5s ease;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
   will-change: opacity, transform;
 }
@@ -352,7 +286,7 @@
 .projeto_quatro h3,
 .projeto_cinco h3,
 .projeto_seis h3 {
-  z-index: 2;
+  z-index: 3;
   color: white;
   font-family: "Space Grotesk", sans-serif;
   letter-spacing: 2px;
@@ -369,7 +303,7 @@
 .projeto_quatro p,
 .projeto_cinco p,
 .projeto_seis p {
-  z-index: 2;
+  z-index: 3;
   color: white;
   font-size: 10px;
   font-family: "Inter", sans-serif;
@@ -394,12 +328,12 @@
   }
 
   /* Estilizando a section_Portfólio  */
-  .Projeto_um:hover::before,
-  .Projeto_dois:hover::before,
-  .Projeto_tres:hover::before,
-  .projeto_quatro:hover::before,
-  .projeto_cinco:hover::before,
-  .projeto_seis:hover::before {
+  .Projeto_um:hover .img_Projeto,
+  .Projeto_dois:hover .img_Projeto,
+  .Projeto_tres:hover .img_Projeto,
+  .projeto_quatro:hover .img_Projeto,
+  .projeto_cinco:hover .img_Projeto,
+  .projeto_seis:hover .img_Projeto {
     transform: scale(1.1);
   }
 
@@ -444,12 +378,12 @@
 
   /* Estilizando a section_Portfólio  */
 
-  .Projeto_um:focus-within::before,
-  .Projeto_dois:focus-within::before,
-  .Projeto_tres:focus-within::before,
-  .projeto_quatro:focus-within::before,
-  .projeto_cinco:focus-within::before,
-  .projeto_seis:focus-within::before {
+  .Projeto_um:focus-within .img_Projeto,
+  .Projeto_dois:focus-within .img_Projeto,
+  .Projeto_tres:focus-within .img_Projeto,
+  .projeto_quatro:focus-within .img_Projeto,
+  .projeto_cinco:focus-within .img_Projeto,
+  .projeto_seis:focus-within .img_Projeto {
     transform: scale(1.1);
   }
 
