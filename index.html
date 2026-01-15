@@ -4,20 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Level UP - Agência</title>
+    <meta
+      name="description"
+      content="Level UP - Agência de marketing digital especializada em impulsionar seu crescimento com estratégias de tráfego, social media e edição de vídeo."
+    />
+    <!-- Meta para ser vizualiados nas redes Sociais -->
+    <meta
+      property="og:title"
+      content="Level UP - Agência de Marketing Digital"
+    />
+    <meta
+      property="og:description"
+      content="Impulsione seu crescimento digital..."
+    />
+    <meta property="og:image" content="assets/img/img_main.webp" />
+
+    <!-- favicon, icone da logo para ficar na aba -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/img/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Level UP" />
+    <link rel="manifest" href="assets/img/site.webmanifest" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Inconsolata:wght@200..900&family=Lobster&family=Protest+Strike&family=Roboto+Slab:wght@100..900&family=Space+Grotesk:wght@300..700&family=Story+Script&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Protest+Strike&family=Roboto+Slab:wght@100..900&family=Space+Grotesk:wght@300..700&family=Story+Script&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Carregar a imagem da main mais rápido -->
+    <link rel="preload" as="image" href="assets/img/img_main.webp" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+
   <body>
     <header id="header_Agencia_Marketing" class="header_Agencia_Marketing">
       <div class="div_Logo_Nav">
@@ -25,7 +55,7 @@
           class="img_Logo"
           src="assets/img/logo_Leve_UP_AGENCIA.webp"
           alt="Logo da agência de marketing / level UP"
-          loading="lazy"
+          loading="eager"
         />
 
         <nav id="nav_Agencia_Marketing" class="nav_Agencia_Marketing">
@@ -46,8 +76,9 @@
       <img
         class="img_main"
         src="assets/img/img_main.webp"
-        alt=""
-        loading="lazy"
+        alt="imagem principal da agência de marketing"
+        loading="eager"
+        fetchpriority="high"
       />
 
       <section id="section_Main" class="section_Main">
@@ -95,12 +126,7 @@
         <div id="div_Projetos_Agencia" class="div_Projetos_Agencia">
           <!-- div -->
           <div class="Projeto_um" tabindex="0">
-            <img
-              class="img_Projeto"
-              src="assets/img/video.webp"
-              alt=""
-              loading="lazy"
-            />
+            <img class="img_Projeto" src="assets/img/video.webp" alt="" />
             <h3 class>Edição de vídeos</h3>
             <p>
               Edição de vídeos com foco em qualidade, clareza e impacto visual.
@@ -108,12 +134,7 @@
           </div>
           <!-- div -->
           <div class="Projeto_dois" tabindex="0">
-            <img
-              class="img_Projeto"
-              src="assets/img/filmando.webp"
-              alt=""
-              loading="lazy"
-            />
+            <img class="img_Projeto" src="assets/img/filmando.webp" alt="" />
             <h3 class>Filmagem</h3>
             <p>
               Edição de vídeos com foco em qualidade, clareza e impacto visual.
@@ -125,7 +146,6 @@
               class="img_Projeto"
               src="assets/img/social-media.webp"
               alt=""
-              loading="lazy"
             />
             <h3 class>Social Media</h3>
             <p>
@@ -134,12 +154,7 @@
           </div>
           <!-- div -->
           <div class="projeto_quatro" tabindex="0">
-            <img
-              class="img_Projeto"
-              src="assets/img/copy.webp"
-              alt=""
-              loading="lazy"
-            />
+            <img class="img_Projeto" src="assets/img/copy.webp" alt="" />
             <h3 class>Copywriter</h3>
             <p>
               Edição de vídeos com foco em qualidade, clareza e impacto visual.
@@ -147,12 +162,7 @@
           </div>
           <!-- div -->
           <div class="projeto_cinco" tabindex="0">
-            <img
-              class="img_Projeto"
-              src="assets/img/gestão.webp"
-              alt=""
-              loading="lazy"
-            />
+            <img class="img_Projeto" src="assets/img/gestão.webp" alt="" />
             <h3 class>Gestão de tráfego</h3>
             <p>
               Edição de vídeos com foco em qualidade, clareza e impacto visual.
@@ -164,12 +174,50 @@
               class="img_Projeto"
               src="assets/img/desenvolvimento.webp"
               alt=""
-              loading="lazy"
             />
             <h3>Desenvolvimento web</h3>
             <p>
               Edição de vídeos com foco em qualidade, clareza e impacto visual.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section sobre a Agência -->
+
+    <section id="section_Sobre" class="section_Sobre">
+      <div id="div_Sobre" class="div_Sobre">
+        <!-- div -->
+        <div class="div_Sobre_Texto">
+          <div class="div_Img">
+            <img src="assets/img/social-media.webp" alt="" />
+          </div>
+          <div class="div_Texto">
+            <span>Sobre nós</span>
+            <h2>Crescimento Através de Dados & Criatividade</h2>
+            <p>
+              Somos uma <strong>agência de marketing digital </strong>focada em
+              resultados reais. Com mais de 5 anos de mercado, já ajudamos
+              centenas de empresas a crescerem exponencialmente no ambiente
+              digital.
+            </p>
+            <p>
+              Nossa metodologia combina análise de dados profunda com
+              estratégias criativas que realmente convertem. Não trabalhamos com
+              achismos - cada decisão é baseada em métricas e performance.
+            </p>
+            <p>
+              Acreditamos que marketing digital vai muito além de likes e
+              compartilhamentos. Nosso foco é gerar vendas, leads qualificados e
+              ROI positivo para nossos clientes.
+            </p>
+          </div>
+          <!-- div -->
+          <div class="div_Sobre_Grid">
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
       </div>

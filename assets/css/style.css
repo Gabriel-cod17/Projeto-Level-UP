@@ -77,6 +77,7 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+  object-position: center;
 }
 
 .section_Main {
@@ -102,7 +103,7 @@
   color: #1f3c88;
   font-family: "Inter", sans-serif;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .div_Section_H1 {
@@ -311,6 +312,88 @@
   padding-bottom: 15px;
   transform: translateY(40px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* section Sobre */
+
+.section_Sobre {
+  background: #1c1c1e;
+}
+
+.div_Sobre {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.div_Sobre_Texto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.div_Img {
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #1c1c1e;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 10px 0px 30px black;
+}
+
+.div_Img img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.div_Texto {
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin-left: 50px;
+  overflow: hidden;
+}
+
+.div_Texto span {
+  color: #205dab;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.div_Texto h2 {
+  color: white;
+  font-size: 45px;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.div_Texto p {
+  color: #000;
+  font-size: 19px;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 10px;
+  line-height: 25px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 /* Para animação funcionar no desktop */
