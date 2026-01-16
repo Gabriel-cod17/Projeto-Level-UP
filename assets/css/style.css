@@ -28,7 +28,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 1rem;
 }
 
 .img_Logo {
@@ -42,7 +42,7 @@
   padding: 0 5px;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.1rem;
   line-height: 20px;
   transition: color 0.5s ease;
 }
@@ -57,7 +57,7 @@
   cursor: pointer;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 800;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 /* Estilizando a parte principal da página, Main */
@@ -82,65 +82,58 @@
 
 .section_Main {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
   margin: 0 auto;
   max-width: 1200px;
   min-height: 100vh;
-  padding: 80px 10px;
-}
-
-.div_Section_P {
-  margin-bottom: 20px;
-  overflow-wrap: break-word;
-  word-break: normal;
+  gap: 1rem;
   overflow: hidden;
 }
 
-.div_Section_P p {
+.div_Section_Main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: normal;
+  gap: 1.5rem;
+}
+
+.section_Main_h1 {
   color: #1f3c88;
   font-family: "Inter", sans-serif;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 700;
+  text-align: center;
 }
 
-.div_Section_H1 {
-  overflow-wrap: break-word;
-  word-break: normal;
-  overflow: hidden;
-}
-
-.div_Section_H1 h1 {
+.section_Main_h2 {
   font-family: "Inter", sans-serif;
-  font-size: 96px;
+  font-size: 4.5rem;
   font-weight: 700;
   color: #fff;
 }
 
-.div_Section_H1 h2 {
+.strong_Crescimento {
   font-family: "Inter", sans-serif;
-  font-size: 96px;
+  font-size: 4rem;
   font-weight: 700;
   color: #1f3c88;
 }
 
-.div_Section_H3 {
-  margin-top: 15px;
-  overflow-wrap: break-word;
-  word-break: normal;
-  overflow: hidden;
-}
-
-.div_Section_H3 h3 {
+.section_Main_h3 {
   color: #bddbdd;
   font-family: "Inter", sans-serif;
-  font-size: 15px;
+  font-size: 1.1rem;
 }
 
 .div_Section_BT {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
   margin-top: 30px;
 }
@@ -173,6 +166,18 @@
   transition: transform 0.5s ease;
 }
 
+.figure_Sec_IMG {
+  margin-top: 10rem;
+  margin-left: 5rem;
+}
+
+.figure_IMG {
+  max-width: 40rem;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
 /* Estilizando a section_Portfólio  */
 
 .section_Portfolio {
@@ -201,18 +206,18 @@
   color: #205dab;
   font-family: "Space Grotesk", sans-serif;
   letter-spacing: 2px;
-  font-size: 18px;
+  font-size: 1rem;
 }
 .div_Resultados h1 {
   color: white;
   font-family: "Inter", sans-serif;
-  font-size: 45px;
+  font-size: 3rem;
 }
 .div_Resultados h3 {
   color: #bddbdd;
   font-family: "Inter", sans-serif;
   letter-spacing: 2px;
-  font-size: 13px;
+  font-size: 1rem;
 }
 
 .div_Projetos_Agencia {
@@ -329,6 +334,7 @@
   justify-content: center;
   margin: 0 auto;
   padding: 15px;
+  gap: 2rem;
 }
 
 .div_Sobre_Texto {
@@ -339,21 +345,16 @@
   margin: 0 auto;
 }
 
-.div_Img {
+.div_Video {
   overflow: hidden;
-  width: 500px;
-  height: 500px;
+  max-width: 30rem;
+  width: 100%;
+  height: 30rem;
   border: 1px solid #1c1c1e;
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 10px 0px 30px black;
-}
-
-.div_Img img {
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-  height: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 .div_Texto {
@@ -364,11 +365,11 @@
   overflow: hidden;
 }
 
-.div_Texto span {
+.Span_Sobre {
   color: #205dab;
   font-family: "Space Grotesk", sans-serif;
   letter-spacing: 2px;
-  font-size: 18px;
+  font-size: 1.1rem;
   margin-bottom: 10px;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -377,7 +378,7 @@
 
 .div_Texto h2 {
   color: white;
-  font-size: 45px;
+  font-size: 3rem;
   font-family: "Inter", sans-serif;
   margin-bottom: 10px;
   overflow-wrap: break-word;
@@ -385,15 +386,74 @@
   white-space: normal;
 }
 
+.span_Dados {
+  color: #205dab;
+  font-size: 3rem;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+}
 .div_Texto p {
-  color: #000;
-  font-size: 19px;
+  color: white;
+  font-size: 1rem;
   font-family: "Inter", sans-serif;
   margin-bottom: 10px;
   line-height: 25px;
   overflow-wrap: break-word;
   word-wrap: break-word;
   white-space: normal;
+}
+/* estilizando div_Sobre_Grid */
+
+.div_Sobre_Grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10rem;
+}
+
+.div_Mercado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.figure_Mercado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #10131b;
+  border-radius: 1rem;
+  max-width: 4rem;
+  width: 100%;
+  height: 4rem;
+  overflow: hidden;
+  background: #10131b;
+}
+
+.figure_Img {
+  max-width: 2rem;
+  width: 100%;
+}
+
+.div_Sobre_Mercado {
+  gap: 1rem;
+}
+
+.p_5 {
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  color: white;
+}
+
+.p_anos {
+  font-family: "Space Grotesk", sans-serif;
+  color: #205dab;
+  font-size: 1rem;
 }
 
 /* Para animação funcionar no desktop */
