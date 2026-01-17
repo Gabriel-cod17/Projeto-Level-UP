@@ -15,7 +15,9 @@
   height: 80px;
   z-index: 999;
   background: transparent;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .header_Agencia_Marketing.scrolled {
@@ -300,7 +302,9 @@
   padding-bottom: 15px;
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 .Projeto_um p,
@@ -316,7 +320,9 @@
   opacity: 0;
   padding-bottom: 15px;
   transform: translateY(40px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 /* section Sobre */
@@ -412,9 +418,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10rem;
+  padding: 1rem;
 }
 
-.div_Mercado {
+.div_Mercado,
+.div_Entregues,
+.div_Ativos {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -422,7 +431,9 @@
   gap: 1rem;
 }
 
-.figure_Mercado {
+.figure_Mercado,
+.figure_Entregues,
+.figure_Ativos {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -440,20 +451,218 @@
   width: 100%;
 }
 
-.div_Sobre_Mercado {
+.div_Sobre_Mercado,
+.div_Sobre_Entregues,
+.div_Sobre_Ativos {
   gap: 1rem;
 }
 
-.p_5 {
+.p_5,
+.p_200,
+.p_50 {
   font-family: "Inter", sans-serif;
-  font-size: 2rem;
+  font-size: 1.9rem;
   color: white;
+  font-weight: 900;
 }
 
-.p_anos {
+.p_anos,
+.Entregues,
+.p_Ativos {
   font-family: "Space Grotesk", sans-serif;
   color: #205dab;
   font-size: 1rem;
+}
+
+/* estilizando a parte section_Contato */
+
+.section_Contato {
+  background: #000;
+}
+
+.div_Section_C {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 100vh;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.span_Contato {
+  color: #205dab;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.h2_Pronto {
+  color: white;
+  font-size: 3rem;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.p_consultoria {
+  color: #bddbdd;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 25px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.contato_Grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.email,
+.telefone,
+.localização,
+.horarios {
+  display: grid;
+  border: 1px solid #1c1c1e;
+  border-radius: 10%;
+  background: #1c1c1e;
+  width: 13rem;
+  height: 10.8rem;
+  overflow: hidden;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+.figure_Email,
+.figure_Telefone,
+.figure_Localização,
+.figure_Horarios {
+  border: 1px solid #10131b;
+  background: #10131b;
+  border-radius: 20%;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+}
+
+.img_Email,
+.img_Telefone,
+.img_Localização,
+.img_Horarios {
+  width: 1rem;
+  height: 1rem;
+}
+
+.span_Email,
+.span_Telefone,
+.span_Localização,
+.span_Horarios {
+  font-family: "Space Grotesk", sans-serif;
+  color: #205dab;
+  font-size: 0.8rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.p_Email,
+.p_Telefone,
+.p_Localização,
+.p_Horarios {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.falar {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  border: 1px solid #c62828;
+  border-radius: 2rem;
+  width: 15rem;
+  height: 2.8rem;
+  background: #c62828;
+  box-shadow: 2px 2px 20px #c62828;
+  color: #fff;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+/* Entrada das divs  */
+
+/* saiu de cima */
+.saiu-cima {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.saiu-cima.entrou {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* baixo */
+
+.saiu-baixo {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.saiu-baixo.entrou {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Lado Esquerdo */
+
+.saiu-lado-esquerdo {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.saiu-lado-esquerdo.eentrou {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* lado Direito */
+
+.saiu-lado-direito {
+  opacity: 0;
+  transform: translateX(40px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.saiu-lado-direito.eentrou {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Para animação funcionar no desktop */
@@ -504,6 +713,12 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* estilizando a parte section_Contato */
+
+  .falar:hover {
+    transform: scale(1.1);
+  }
 }
 
 /* Para animação funcionar no mobile */
@@ -552,6 +767,12 @@
   .projeto_seis:focus-within p {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* estilizando a parte section_Contato */
+
+  .falar:active {
+    transform: scale(1);
   }
 }
 

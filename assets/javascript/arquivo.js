@@ -1,6 +1,42 @@
 const header_Agencia_Marketing = document.getElementById(
-  "header_Agencia_Marketing"
+  "header_Agencia_Marketing",
 );
+const saiu_Cima = document.querySelectorAll(".saiu-cima");
+const saiu_lado_esquerdo = document.querySelectorAll(".saiu-lado-esquerdo");
+const saiu_lado_direito = document.querySelectorAll(".saiu-lado-direito");
+const saiu_baixo = document.querySelectorAll(".saiu-baixo ");
+
+const observerCima = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("entrou");
+    }
+  });
+});
+
+const observeEsquerdo = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("eentrou");
+    }
+  });
+});
+
+saiu_Cima.forEach((s) => {
+  observerCima.observe(s);
+});
+
+saiu_baixo.forEach((s) => {
+  observerCima.observe(s);
+});
+
+saiu_lado_esquerdo.forEach((s) => {
+  observeEsquerdo.observe(s);
+});
+
+saiu_lado_direito.forEach((s) => {
+  observeEsquerdo.observe(s);
+});
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
