@@ -638,6 +638,7 @@ html {
 .pictures img {
   width: 3rem;
   height: auto;
+  color: white;
 }
 
 .div_Footer_um p {
