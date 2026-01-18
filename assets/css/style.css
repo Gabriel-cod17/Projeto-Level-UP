@@ -5,6 +5,10 @@
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* configuração da parte do header */
 
 .header_Agencia_Marketing {
@@ -22,7 +26,8 @@
 
 .header_Agencia_Marketing.scrolled {
   position: fixed;
-  background: #0000009a;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(0.5rem);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
@@ -195,6 +200,7 @@
   max-width: 1200px;
   min-height: 100vh;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 .div_Resultados {
@@ -602,6 +608,122 @@
   color: #fff;
   transition: transform 0.5s ease;
   cursor: pointer;
+}
+
+/* Estilizando a parte final, o footer */
+.footer {
+  background: #1c1c1e;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+}
+
+.div_Footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 1rem;
+}
+
+.div_Footer_um,
+.div_Footer_dois,
+.div_Footer_tres {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.pictures img {
+  width: 3rem;
+  height: auto;
+}
+
+.div_Footer_um p {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.pictures_Instagram {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 1rem 0;
+}
+
+.pictures_Instagram img {
+  width: 1.5rem;
+  height: auto;
+}
+
+.div_Footer_dois p {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 1rem 0;
+}
+
+.div_Footer_dois a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.2rem 0;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+}
+
+.footer_Pcontato {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 1rem 0;
+}
+
+.Footer_Email,
+.Footer_Telefone,
+.Footer_Localizacao {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.Footer_Email img,
+.Footer_Telefone img,
+.Footer_Localizacao img {
+  width: 1rem;
+  height: auto;
+}
+
+.Footer_Email p,
+.Footer_Telefone p,
+.Footer_Localizacao p {
+  color: #fff;
+  padding: 0 0.5rem;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+
+.linha_Footer {
+  border: none;
+  height: 0.06em;
+  background-color: #000;
+  margin: 0.5rem;
+}
+.p_Linha_Footer {
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 100;
 }
 
 /* Entrada das divs  */
