@@ -232,7 +232,6 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-
   margin-top: 30px;
 }
 
@@ -251,7 +250,8 @@ html {
   text-align: left;
   border: 1px solid rgba(255, 255, 255, 0.116);
   border-radius: 15px;
-  width: 350px;
+  width: 100%;
+  max-width: 100%;
   height: 200px;
   padding: 0 10px;
   overflow: hidden;
@@ -347,6 +347,7 @@ html {
   margin: 0 auto;
   padding: 15px;
   gap: 2rem;
+  overflow: hidden;
 }
 
 .div_Sobre_Texto {
@@ -367,6 +368,15 @@ html {
   overflow: hidden;
   box-shadow: 10px 0px 30px black;
   aspect-ratio: 16 / 9;
+  position: relative;
+}
+
+.div_Video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .div_Texto {
@@ -547,12 +557,13 @@ html {
   border: 1px solid #1c1c1e;
   border-radius: 10%;
   background: #1c1c1e;
-  width: 13rem;
-  height: 10.8rem;
+  width: 100%;
+  max-width: 100%;
   overflow: hidden;
   place-items: center;
   text-align: center;
   padding: 1rem;
+  gap: 1rem;
 }
 .figure_Email,
 .figure_Telefone,
@@ -636,7 +647,7 @@ html {
 }
 
 .pictures img {
-  width: 3rem;
+  width: 2rem;
   height: auto;
 }
 
@@ -657,7 +668,7 @@ html {
 }
 
 .pictures_Instagram img {
-  width: 1.5rem;
+  width: 2rem;
   height: auto;
 }
 
@@ -690,7 +701,7 @@ html {
 .Footer_Localizacao {
   display: flex;
   flex-direction: row;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   justify-content: center;
   align-items: center;
 }
@@ -901,6 +912,44 @@ html {
 /* mobile Pequeno */
 
 @media (max-width: 480px) {
+  /* Estilizando a nav, parte inicial da página */
+  .nav_Agencia_Marketing {
+    display: none;
+  }
+  .bt_Consultoria {
+    display: none;
+  }
+
+  /* Section main */
+  .section_Main {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+    padding: 1rem;
+  }
+
+  .section_Main_h1 {
+    font-size: 1rem;
+  }
+
+  .section_Main_h2 {
+    font-size: 2.3rem;
+  }
+
+  .strong_Crescimento {
+    font-size: 3.6rem;
+  }
+
+  .section_Main_h3 {
+    font-size: 1rem;
+  }
+
+  .div_Section_BT {
+    gap: 20px;
+  }
+
   .div_Section_P p {
     font-size: 18px;
   }
@@ -923,12 +972,13 @@ html {
     margin-top: 30px;
   }
 
-  .button_Case {
-    font-size: 13px;
+  .figure_Sec_IMG {
+    margin: 0;
   }
-
-  .button_Agendar {
-    font-size: 13px;
+  .figure_IMG {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 
   /* Estilizando a section_Portfólio  */
@@ -956,19 +1006,185 @@ html {
   .div_Projetos_Agencia {
     grid-template-columns: 1fr;
   }
+  /* estilizando a section sobre */
+
+  .div_Sobre_Texto {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .div_Video {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    width: 23rem;
+    height: 30rem;
+    border: 1px solid #1c1c1e;
+    border-radius: 30px;
+    box-shadow: 10px 0px 30px black;
+    aspect-ratio: 16/9;
+  }
+
+  .div_Video video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+  }
+
+  .div_Texto {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin: 2rem 0;
+    gap: 1rem;
+  }
+
+  /* estilizando div_Sobre_Grid */
+
+  .div_Sobre_Grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .div_Sobre_Grid > :nth-child(3) {
+    grid-column: span 2;
+    justify-self: center;
+  }
+
+  /* contato */
+
+  .contato_Grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+
+  .email,
+  .telefone,
+  .localização,
+  .horarios {
+    display: grid;
+    border: 1px solid #1c1c1e;
+    border-radius: 10%;
+    background: #1c1c1e;
+    width: 100%;
+    max-width: 100%;
+    height: 10.8rem;
+    overflow: hidden;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  /* footer */
+
+  .div_Footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: flex-start;
+    gap: 1rem;
+  }
+
+  .div_Footer_um p {
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-weight: 100;
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  .p_Linha_Footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 /* mobile tablet */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  /* portifolios */
+  .div_Projetos_Agencia {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  /* sobre */
+  .div_Sobre_Texto {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .div_Texto {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .contato_Grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* tablet notebook */
 
 @media (max-width: 1024px) {
+  /* Section main */
+  .section_Main {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+    padding: 1rem;
+  }
+
+  .div_Section_Main {
+    gap: 3rem;
+  }
+
+  .figure_Sec_IMG {
+    margin: 0;
+  }
+  .figure_IMG {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
-/* desktop  */
+@media (max-width: 1051px) {
+  /* Section main */
+  .section_Main {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+    padding: 1rem;
+  }
 
-@media (max-width: 480px) {
+  .div_Section_Main {
+    gap: 3rem;
+  }
+
+  .figure_Sec_IMG {
+    margin: 0;
+  }
+  .figure_IMG {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 }
