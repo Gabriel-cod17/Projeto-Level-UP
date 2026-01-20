@@ -3,19 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Level UP - Agência</title>
+    <title>Agência de marketing Digital em Goiânia | Level UP</title>
     <meta
       name="description"
-      content="Level UP - Agência de marketing digital especializada em impulsionar seu crescimento com estratégias de tráfego, social media e edição de vídeo."
+      content="Agência de marketing digital em Goiânia especializada em tráfego pago, social media, sites e vendas online. Consultoria gratuita.."
     />
     <!-- Meta para ser vizualiados nas redes Sociais -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Level UP Agência" />
     <meta
       property="og:title"
-      content="Level UP - Agência de Marketing Digital"
+      content="Agência de Marketing Digital em Goiânia | Level UP"
     />
     <meta
       property="og:description"
-      content="Impulsione seu crescimento digital..."
+      content="Impulsione seu crescimento com estratégias de marketing digital que geram resultados reais."
     />
     <meta property="og:image" content="assets/img/img_main.webp" />
 
@@ -49,6 +52,16 @@
   </head>
 
   <body>
+    <div id="cookie-banner" class="cookie-banner">
+      <p>
+        Usamos cookies para melhorar sua experiência. Ao continuar navegando,
+        você concorda com nossa
+        <a href="/politicaDePrivacidade.html" target="_blank"
+          >Política de Privacidade</a
+        >.
+      </p>
+      <button id="accept-cookies">Aceitar</button>
+    </div>
     <header
       id="header_Agencia_Marketing"
       class="header_Agencia_Marketing saiu-cima"
@@ -72,6 +85,7 @@
         </button>
         <div id="div_abrir_Menu" class="div_abrir_Menu">
           <img
+            id="img_abrir_Menu"
             class="img_abrir_Menu"
             src="assets/img/menu-aberto.png"
             alt="menu mobile da agência de marketing / level up"
@@ -162,10 +176,10 @@
           <div class="Projeto_um" tabindex="0">
             <img
               class="img_Projeto"
-              src="assets/img/video.webp"
+              src="assets/img/edição.webp"
               alt="foto da edição de vídeos"
             />
-            <h3 class>Edição de vídeos</h3>
+            <h3>Edição de vídeos</h3>
             <p>
               Edição de vídeos com foco em qualidade, clareza e impacto visual.
             </p>
@@ -174,7 +188,7 @@
           <div class="Projeto_dois" tabindex="0">
             <img
               class="img_Projeto"
-              src="assets/img/filmando.webp"
+              src="assets/img/filmagens.webp"
               alt="Imagem sobre filmagem da level up / agência de marketing"
             />
             <h3 class>Filmagem</h3>
@@ -186,7 +200,7 @@
           <div class="Projeto_tres" tabindex="0">
             <img
               class="img_Projeto"
-              src="assets/img/social-media.webp"
+              src="assets/img/social.webp"
               alt="Imagem sobre social media da level Up / Agência de marketing"
             />
             <h3 class>Social Media</h3>
@@ -222,7 +236,7 @@
           <div class="projeto_seis" tabindex="0">
             <img
               class="img_Projeto"
-              src="assets/img/desenvolvimento.webp"
+              src="assets/img/web.webp"
               alt="Imagem sobre desenvolvimento web da level up / agência de marketing"
             />
             <h3>Desenvolvimento web</h3>
@@ -281,8 +295,8 @@
               />
             </figure>
             <div class="div_Sobre_Mercado">
-              <p class="p_5">5+</p>
-              <p class="p_anos">Anos de Mercado</p>
+              <p class="p_5">1</p>
+              <p class="p_anos">Ano de Mercado</p>
             </div>
           </div>
           <!-- div -->
@@ -295,7 +309,7 @@
               />
             </figure>
             <div class="div_Sobre_Entregues">
-              <p class="p_200">200+</p>
+              <p class="p_200">50+</p>
               <p class="Entregues">Projetos Entregues</p>
             </div>
           </div>
@@ -309,7 +323,7 @@
               />
             </figure>
             <div class="div_Sobre_Ativos">
-              <p class="p_50">50+</p>
+              <p class="p_50">10+</p>
               <p class="p_Ativos">Clientes Ativos</p>
             </div>
           </div>
@@ -406,7 +420,9 @@
             em líderes de mercado.
           </p>
           <picture class="pictures_Instagram">
-            <a href="">
+            <a
+              href="https://www.instagram.com/level.up_oficiall?igsh=MnBmeW56bDFyZTh5&utm_source=qr"
+            >
               <img src="assets/img/instagram.png" alt="" />
             </a>
           </picture>
@@ -444,6 +460,39 @@
       </p>
     </footer>
 
-    <script src="assets/javascript/arquivo.js"></script>
+    <script src="assets/javascript/arquivo.js" defer></script>
+    <script>
+      const cookieBanner = document.getElementById("cookie-banner");
+      const acceptBtn = document.getElementById("accept-cookies");
+
+      function loadGA() {
+        const script1 = document.createElement("script");
+        script1.async = true;
+        script1.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
+        document.head.appendChild(script1);
+
+        const script2 = document.createElement("script");
+        script2.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    `;
+        document.head.appendChild(script2);
+      }
+
+      if (localStorage.getItem("cookiesAccepted") === "true") {
+        cookieBanner.style.display = "none";
+        loadGA();
+      }
+
+      acceptBtn.addEventListener("click", () => {
+        localStorage.setItem("cookiesAccepted", "true");
+        cookieBanner.style.display = "none";
+        loadGA();
+      });
+      localStorage.clear();
+    </script>
   </body>
 </html>
