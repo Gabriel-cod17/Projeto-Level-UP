@@ -9,6 +9,15 @@ const divAbrirMenu = document.getElementById("div_abrir_Menu");
 const headerMobile = document.querySelector(".header_Mobile");
 const link = document.querySelectorAll(".link");
 const img_abrir_Menu = document.getElementById("img_abrir_Menu");
+const video = document.getElementById("video");
+
+window.addEventListener("load", () => {
+  if (video) {
+    video.muted = true;
+    video.setAttribute("muted", "");
+    video.play().catch(() => {});
+  }
+});
 
 link.forEach((l) => {
   l.addEventListener("click", () => {
