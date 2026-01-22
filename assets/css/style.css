@@ -286,8 +286,8 @@ body {
 }
 
 .figure_Sec_IMG {
-  margin-top: 10rem;
-  margin-left: 5rem;
+  padding: 10rem;
+  padding: 5rem;
 }
 
 .figure_IMG {
@@ -1189,6 +1189,7 @@ body {
   .div_Sobre_Grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 
   .div_Sobre_Grid > :nth-child(3) {
