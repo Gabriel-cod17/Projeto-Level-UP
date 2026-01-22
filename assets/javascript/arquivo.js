@@ -11,14 +11,13 @@ const link = document.querySelectorAll(".link");
 const img_abrir_Menu = document.getElementById("img_abrir_Menu");
 const video = document.getElementById("video");
 
-window.addEventListener("load", () => {
-  if (video) {
-    video.muted = true;
-    video.setAttribute("muted", "");
-    video.play().catch(() => {});
-  }
-});
+const startVideo = () => {
+  video.muted = true;
+  video.play().catch(() => {});
+  document.removeEventListener("touchstart", startVideo);
+};
 
+document.addEventListener("touchstart", startVideo);
 link.forEach((l) => {
   l.addEventListener("click", () => {
     if (headerMobile.classList.contains("voltou")) {
