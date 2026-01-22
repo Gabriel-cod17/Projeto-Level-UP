@@ -353,12 +353,11 @@ html {
 .projeto_cinco,
 .projeto_seis {
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  text-align: left;
+  text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.116);
   border-radius: 15px;
   width: 100%;
@@ -414,14 +413,15 @@ html {
   z-index: 3;
   color: white;
   font-family: "Space Grotesk", sans-serif;
-  letter-spacing: 2px;
-  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-size: 20px;
   padding-bottom: 15px;
   opacity: 0;
   transform: translateY(40px);
+  overflow: hidden;
   transition:
-    opacity 0.5s ease,
-    transform 0.5s ease;
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .Projeto_um p,
@@ -432,14 +432,15 @@ html {
 .projeto_seis p {
   z-index: 3;
   color: white;
-  font-size: 10px;
+  font-size: 12px;
   font-family: "Inter", sans-serif;
   opacity: 0;
   padding-bottom: 15px;
   transform: translateY(40px);
+  overflow: hidden;
   transition:
-    opacity 0.5s ease,
-    transform 0.5s ease;
+    opacity 1s ease,
+    transform 1s ease;
 }
 
 /* section Sobre */
@@ -758,7 +759,7 @@ html {
 }
 
 .pictures img {
-  width: 2rem;
+  width: 2.5rem;
   height: auto;
 }
 
@@ -793,7 +794,7 @@ html {
 
 .div_Footer_dois a {
   text-decoration: none;
-  color: #fff;
+  color: white;
   padding: 0.2rem 0;
   font-family: "Inter", sans-serif;
   font-size: 0.9rem;
@@ -967,6 +968,12 @@ html {
   .falar:hover {
     transform: scale(1.1);
   }
+
+  /* footer */
+
+  .div_Footer_dois a:hover {
+    color: #1f3c88;
+  }
 }
 
 /* Para animação funcionar no mobile */
@@ -1025,6 +1032,11 @@ html {
 
   .falar:active {
     transform: scale(1);
+  }
+
+  /* footer */
+  .div_Footer_dois a:active {
+    color: #1f3c88;
   }
 }
 
