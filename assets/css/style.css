@@ -297,7 +297,7 @@ body {
   margin: 0 auto;
 }
 
-/* Estilizando a section_Portfólio  */
+/* Estilizando a section_Portfólio */
 
 .section_Portfolio {
   background-color: #000;
@@ -328,11 +328,13 @@ body {
   letter-spacing: 2px;
   font-size: 1rem;
 }
+
 .div_Resultados h1 {
   color: white;
   font-family: "Inter", sans-serif;
   font-size: 3rem;
 }
+
 .div_Resultados h3 {
   color: #bddbdd;
   font-family: "Inter", sans-serif;
@@ -390,14 +392,12 @@ body {
   position: absolute;
   content: "";
   inset: 0;
-
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.9),
     rgba(0, 0, 0, 0.8) 35%,
     rgba(0, 0, 0, 0.5) 65%
   );
-
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: 2;
@@ -531,6 +531,7 @@ body {
   word-wrap: break-word;
   white-space: normal;
 }
+
 .div_Texto p {
   color: white;
   font-size: 1rem;
@@ -541,6 +542,7 @@ body {
   word-wrap: break-word;
   white-space: normal;
 }
+
 /* estilizando div_Sobre_Grid */
 
 .div_Sobre_Grid {
@@ -678,6 +680,7 @@ body {
   padding: 1rem;
   gap: 1rem;
 }
+
 .figure_Email,
 .figure_Telefone,
 .figure_Localização,
@@ -735,6 +738,7 @@ body {
 }
 
 /* Estilizando a parte final, o footer */
+
 .footer {
   background: #1c1c1e;
   width: 100%;
@@ -843,6 +847,7 @@ body {
   background-color: #000;
   margin: 0.5rem;
 }
+
 .p_Linha_Footer {
   color: #fff;
   font-family: "Space Grotesk", sans-serif;
@@ -850,9 +855,10 @@ body {
   font-weight: 100;
 }
 
-/* Entrada das divs  */
+/* Entrada das divs */
 
 /* saiu de cima */
+
 .saiu-cima {
   opacity: 0;
   transform: translateY(-40px);
@@ -925,11 +931,13 @@ body {
   .button_Case:hover {
     transform: scale(1.1);
   }
+
   .button_Agendar:hover {
     transform: scale(1.1);
   }
 
-  /* Estilizando a section_Portfólio  */
+  /* Estilizando a section_Portfólio */
+
   .Projeto_um:hover .img_Projeto,
   .Projeto_dois:hover .img_Projeto,
   .Projeto_tres:hover .img_Projeto,
@@ -987,14 +995,16 @@ body {
   .nav_Agencia_Marketing_Mobile a:active {
     color: white;
   }
+
   .button_Case:active {
     transform: scale(1.1);
   }
+
   .button_Agendar:active {
     transform: scale(1.1);
   }
 
-  /* Estilizando a section_Portfólio  */
+  /* Estilizando a section_Portfólio */
 
   .Projeto_um:focus-within .img_Projeto,
   .Projeto_dois:focus-within .img_Projeto,
@@ -1013,6 +1023,7 @@ body {
   .projeto_seis:focus-within::after {
     opacity: 1;
   }
+
   .Projeto_um:focus-within h3,
   .Projeto_dois:focus-within h3,
   .Projeto_tres:focus-within h3,
@@ -1036,6 +1047,7 @@ body {
   }
 
   /* footer */
+
   .div_Footer_dois a:active {
     color: #1f3c88;
   }
@@ -1048,18 +1060,23 @@ body {
     display: flex;
     padding: 2rem 0.5rem;
   }
+
   .div_abrir_Menu {
     display: flex;
   }
+
   /* Estilizando a nav, parte inicial da página */
+
   .nav_Agencia_Marketing {
     display: none;
   }
+
   .bt_Consultoria {
     display: none;
   }
 
   /* Section main */
+
   .section_Main {
     flex-direction: column;
     text-align: center;
@@ -1114,13 +1131,14 @@ body {
   .figure_Sec_IMG {
     margin: 0;
   }
+
   .figure_IMG {
     width: 100%;
     max-width: 100%;
     height: auto;
   }
 
-  /* Estilizando a section_Portfólio  */
+  /* Estilizando a section_Portfólio */
 
   .section_Main {
     gap: 20px;
@@ -1145,6 +1163,7 @@ body {
   .div_Projetos_Agencia {
     grid-template-columns: 1fr;
   }
+
   /* estilizando a section sobre */
 
   .div_Sobre_Texto {
@@ -1240,6 +1259,7 @@ body {
     font-size: 0.9rem;
     text-align: left;
   }
+
   .p_Linha_Footer {
     display: flex;
     justify-content: center;
@@ -1252,6 +1272,7 @@ body {
 
 @media (max-width: 900px) {
   /* portifolios */
+
   .div_Projetos_Agencia {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1260,6 +1281,7 @@ body {
   }
 
   /* sobre */
+
   .div_Sobre_Texto {
     flex-direction: column;
     gap: 1.5rem;
@@ -1281,6 +1303,7 @@ body {
 
 @media (max-width: 1024px) {
   /* Section main */
+
   .section_Main {
     flex-direction: column;
     text-align: center;
@@ -1297,6 +1320,7 @@ body {
   .figure_Sec_IMG {
     margin: 0;
   }
+
   .figure_IMG {
     width: 100%;
     max-width: 100%;
@@ -1306,6 +1330,7 @@ body {
 
 @media (max-width: 1051px) {
   /* Section main */
+
   .section_Main {
     flex-direction: column;
     text-align: center;
@@ -1322,6 +1347,7 @@ body {
   .figure_Sec_IMG {
     margin: 0;
   }
+
   .figure_IMG {
     width: 100%;
     max-width: 100%;
